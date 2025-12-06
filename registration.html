@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration</title>
+
+<body>
+
+<nav>Home > Registration</nav>
+
+<header>
+<img src="../images/GU.png" alt="GU Logo" width="80" height="80">
+<h1>GU-EduConnect</h1>
+</header>
+
+<h2>Student Registration Form</h2>
+
+<form action="pages/thank.html" method="get" name="registrationForm" id="registrationForm" align="center" border="1">
+
+<fieldset><legend>Personal Information</legend>
+<label>Full Name</label><br>
+<input type="text" name="fullName" required minlength="3" maxlength="50" placeholder="Enter your full name" autofocus autocomplete="name"><br><br>
+
+<label>Student ID</label><br>
+<input type="text" name="studentId" required pattern="\d{9}" placeholder="123456789"><br><br>
+
+<label>Email</label><br>
+<input type="email" name="email" required placeholder="student@example.com" autocomplete="email"><br><br>
+
+<label>Password</label><br>
+<input type="password" name="password" required minlength="8" maxlength="20" placeholder="Minimum 8 characters" autocomplete="new-password"><br><br>
+
+<label>Confirm Password</label><br>
+<input type="password" name="confirmPassword" required minlength="8" maxlength="20" placeholder="Re-enter password"><br><br>
+
+<label>Date of Birth</label><br>
+<input type="date" name="dob" required max="2007-12-06" autocomplete="bday"><br><br>
+
+<fieldset><legend>Gender</legend>
+<label><input type="radio" name="gender" value="Male" required>Male</label><br>
+<label><input type="radio" name="gender" value="Female" required>Female</label><br>
+<label><input type="radio" name="gender" value="Prefer not to say" required>Prefer not to say</label>
+</fieldset><br>
+
+<label>Profile Photo</label><br>
+<input type="file" name="profilePhoto" accept="image/*"><br>
+</fieldset>
+
+<fieldset><legend>Academic Information</legend>
+<fieldset><legend>Degree Level *</legend>
+<label><input type="radio" name="degreeLevel" value="Bachelor's Degree" required checked>Bachelor's Degree</label><br>
+<label><input type="radio" name="degreeLevel" value="Master's Degree" required>Master's Degree</label><br>
+<label><input type="radio" name="degreeLevel" value="PhD" required>PhD</label>
+</fieldset><br>
+
+<label>Major</label><br>
+<select name="major" required>
+<option value="">-- Select Major --</option>
+<optgroup label="Engineering">
+<option>Computer Science</option><option>Information Technology</option>
+<option>Software Engineering</option><option>Computer Engineering</option>
+</optgroup>
+<optgroup label="Business">
+<option>Marketing</option><option>Finance</option><option>Management</option><option>Accounting</option>
+</optgroup>
+<optgroup label="Science">
+<option>Mathematics</option><option>Physics</option>
+<option>Biology</option><option>Chemistry</option>
+</optgroup>
+</select><br><br>
+
+<label>Semester</label><br>
+<input type="number" name="semester" required min="1" max="12" placeholder="1-12"><br><br>
+
+<label>GPA(optional)</label><br>
+<input type="number" name="gpa" min="0" max="4" step="0.01" placeholder="0.00 - 4.00"><br><br>
+
+<fieldset><legend>Programming Experience</legend>
+<label><input type="checkbox" name="experience" value="Python">Python</label><br>
+<label><input type="checkbox" name="experience" value="Java">Java</label><br>
+<label><input type="checkbox" name="experience" value="C++">C++</label><br>
+<label><input type="checkbox" name="experience" value="JavaScript">JavaScript</label><br>
+<label><input type="checkbox" name="experience" value="PHP">PHP</label><br>
+<label><input type="checkbox" name="experience" value="C#">C#</label><br>
+<label><input type="checkbox" name="experience" value="None">None</label>
+</fieldset>
+</fieldset>
+
+
+<fieldset><legend>Course Preferences</legend>
+
+<fieldset><legend>Learning Mode *</legend>
+<label><input type="radio" name="learningMode" value="On-Campus" required>On-Campus</label><br>
+<label><input type="radio" name="learningMode" value="Online" required>Online</label><br>
+<label><input type="radio" name="learningMode" value="Hybrid Mixed" required>Hybrid Mixed</label>
+</fieldset><br>
+
+<label>Course Categories------(Ctrl for multiple)</label><br>
+<select name="categories" multiple size="5" required>
+<option>Web Development</option><option>Mobile Development</option><option>Data Science</option>
+<option>Artificial Intelligence</option><option>Cybersecurity</option>
+<option>Game Development</option><option>Cloud Computing</option><option>Database Management</option>
+<option>DevOps</option><option>Blockchain Technology</option>
+</select><br><br>
+
+<label>Class Schedule</label><br>
+<select name="schedule" required>
+<option value="">** Select Schedule **</option>
+<option>Morning</option><option>Afternoon</option><option>Evening</option><option>Weekend</option>
+</select><br><br>
+
+<label>Primary Course</label><br>
+<select name="primaryCourse" required>
+<option value="">-- Select Primary Course --</option>
+<optgroup label="Web">
+<option>HTML & CSS</option><option>Advanced JavaScript</option>
+<option>React.js Development</option><option>Node.js & Backend</option>
+</optgroup>
+<optgroup label="Mobile">
+<option>Android Dev</option><option>iOS Dev</option><option>Flutter</option>
+</optgroup>
+<optgroup label="AI">
+<option>Python for Data</option><option>Machine Learning</option><option>Deep Learning</option>
+</optgroup>
+</select><br><br>
+
+<label>Alternative Courses(optional)</label><br>
+<select name="alternativeCourses" multiple size="4" title="Select up to 3 alternative courses">
+<option>SQL & Databases</option>
+<option>Git & Version Control</option>
+<option>Docker & Containers</option>
+<option>AWS Cloud Basics</option>
+<option>Web Security</option>
+<option>Software Testing</option>
+</select>
+</fieldset>
+
+<fieldset><legend>Additional Information</legend>
+<label>How did you hear about us?</label><br>
+<select name="referralSource">
+<option value="">-- Select --</option>
+<option>Search Engine</option><option>Social Media</option><option>Friend</option>
+<option>University Announcement</option><option>Online Ad</option><option>Other</option>
+</select><br><br>
+
+<label>Special Requirements</label><br>
+<textarea name="specialRequirements" rows="4" cols="50" maxlength="500"></textarea><br><br>
+
+<label>Learning Goals</label><br>
+<textarea name="learningGoals" rows="5" cols="50" maxlength="500"></textarea>
+</fieldset>
+
+
+<fieldset><legend>Terms</legend>
+<label><input type="checkbox" name="termsAgreement" required>I agree to Terms *</label><br>
+<label><input type="checkbox" name="privacyPolicy" required>I accept Privacy *</label><br>
+<label><input type="checkbox" name="newsletter">Subscribe to newsletter</label><br>
+<label><input type="checkbox" name="marketing">Marketing emails</label>
+</fieldset>
+
+<input type="hidden" name="formVersion" value="1.0">
+<input type="hidden" name="submissionDate">
+<input type="hidden" name="userAgent">
+
+<button type="submit">Register Now</button>
+<button type="reset">Clear</button>
+<button type="button">Save Draft</button>
+</form>
+
+<footer>
+<p>&copy; 2025 EduConnect</p>
+<p>Last updated: 6-12-2025</p>
+</footer>
+
+</body>
+</html>
